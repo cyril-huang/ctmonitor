@@ -1,0 +1,11 @@
+Package: ctmonitor
+Essential: No
+Priority: Optional
+Section: Application
+Maintainer: Gyoza <gyoza@gmx.com>
+Architecture: amd64
+Version: 0.0.1
+Depends: libgtk3.0-0
+Provides: 
+Conflicts:
+Description: The coretemp monitor

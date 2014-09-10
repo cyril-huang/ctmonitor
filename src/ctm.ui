@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<interface>
+  <object class="GtkUIManager" id="uimanager">
+    <child>
+      <object class="GtkActionGroup" id="actiongroup">
+
+	<child>
+	  <object class="GtkAction" id="File">
+	    <property name="name">File</property>
+	    <property name="stock_id">gtk-file</property>
+	  </object>
+	</child>
+	<child>
+	  <object class="GtkAction" id="Save">
+	    <property name="name">Save</property>
+	    <property name="stock_id">gtk-save</property>
+	  </object>
+	</child>
+	<child>
+	  <object class="GtkAction" id="Quit">
+	    <property name="name">Quit</property>
+	    <property name="stock_id">gtk-quit</property>
+	  </object>
+	</child>
+	<child>
+	  <object class="GtkAction" id="Edit">
+	    <property name="name">Edit</property>
+	    <property name="stock_id">gtk-edit</property>
+	  </object>
+	</child>
+	<child>
+	  <object class="GtkAction" id="Preference">
+	    <property name="name">Preference</property>
+	    <property name="stock_id">gtk-preferences</property>
+	  </object>
+	</child>
+	<child>
+	  <object class="GtkAction" id="Help">
+	    <property name="name">Help</property>
+	    <property name="stock_id">gtk-help</property>
+	  </object>
+	</child>
+	<child>
+	  <object class="GtkAction" id="About">
+	    <property name="name">About</property>
+	    <property name="stock_id">gtk-about</property>
+	  </object>
+	</child>
+      </object>
+    </child>
+
+    <ui>
+      <menubar name="mainmenu">
+	<menu action="File">
+	  <menuitem action="Save"/>
+	  <separator/>
+	  <menuitem action="Quit"/>
+	</menu>
+	<menu action="Edit">
+	  <menuitem action="Preference"/>
+	</menu>
+	<menu action="Help">
+	  <menuitem action="Help"/>
+	  <menuitem action="About"/>
+	</menu>
+      </menubar>
+    </ui>
+
+  </object>
+
+  <object class="GtkWindow" id="window">
+    <property name="visible">True</property>
+
+    <child>
+      <object class="GtkVBox" id="menubox">
+      <property name="visible">True</property>
+
+	<child>
+	  <object class="GtkMenuBar" constructor="uimanager" id="mainmenu">
+	    <property name="visible">True</property>
+	  </object>
+	  <packing>
+	    <property name="expand">FALSE</property>
+	  </packing>
+	</child>
+
+	<child>
+	  <object class="GtkFrame" id="frame">
+	    <property name="visible">True</property>
+	    <property name="shadow-type">GTK_SHADOW_ETCHED_IN</property>
+	    <property name="border-width">10</property>
+
+	    <child type="label">
+	      <object class="GtkLabel" id="frame-label">
+		<property name="visible">True</property>
+		<property name="label">CPU Temperature</property>
+	      </object>
+	    </child>
+
+	    <child>
+	      <object class="GtkDrawingArea" id="drawarea">
+		<property name="visible">True</property>
+
+	      </object>
+	    </child>
+
+	  </object>
+	</child>
+
+      </object>
+    </child>
+
+
+  </object>
+</interface>

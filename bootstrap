@@ -1,0 +1,8 @@
+#!/bin/sh
+rm -rf aclocal.m4 config.guess config.log config.sub autom4te.cache config.status configure compile depcomp install-sh missing config.h* Makefile Makefile.in stamp-h1
+#find . -name "Makefile.in" | xargs rm -f
+aclocal
+autoheader
+intltoolize -f -c
+automake --foreign --copy --add-missing
+autoconf

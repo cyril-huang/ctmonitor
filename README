@@ -1,0 +1,10 @@
+coretemp monitor utility 0.0.1
+
+To compile the source need install the package libgtk-3-dev or libgtk-2-dev
+The default is compiled with gtk2 library, to compile with gtk3 library
+
+./bootstrap
+./configure --with-gtk3
+
+make
+make install

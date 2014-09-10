@@ -1,0 +1,4 @@
+# List of source files which contain translatable strings.
+[encoding: UTF-8]
+src/ctm.c
+../src/interface.c
