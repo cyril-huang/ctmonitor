@@ -7,8 +7,11 @@ A Gtk programming tutorial example to show the temperatures of new Intel core CP
 
 installation
 ============
+
 ./bootstrap
+
 ./configure --with-gtk3
 
 make
+
 make install
